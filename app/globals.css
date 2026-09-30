@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-bg: #0a0a0a;
+  --color-panel: #111111;
+  --color-raised: #1a1a1a;
+  --color-line: #262626;
+  --color-line-strong: #3a3a3a;
+  --color-fg: #ededed;
+  --color-muted: #a1a1a1;
+  --color-dim: #8a8a8a;
+  --color-del: #f87171;
+  --color-del-bg: rgba(248, 113, 113, 0.12);
+  --color-ins: #4ade80;
+  --color-ins-bg: rgba(74, 222, 128, 0.12);
+
+  --font-sans: var(--nf-geist), var(--nf-thai), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--nf-geist-mono), var(--nf-thai), ui-monospace, monospace;
+}
+
+html {
+  color-scheme: dark;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-fg);
+  font-family: var(--font-sans);
+  font-feature-settings: "ss01";
+  /* Scale the Thai fallback (Noto Sans Thai) to Geist's x-height so mixed runs sit on one optical size. */
+  font-size-adjust: from-font;
+}
+
+::selection {
+  background: #ededed;
+  color: #0a0a0a;
+}
+
+:focus-visible {
+  outline: 2px solid #ededed;
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+* {
+  scrollbar-color: #3a3a3a transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
