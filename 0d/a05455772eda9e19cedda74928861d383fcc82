@@ -1,0 +1,27 @@
+.github/workflows/pages.yml
+  s_d8bfe202318d9f::t_54d796ec08b4cc 1-47
+next.config.ts
+  s_d8bfe202318d9f::t_83224c3242f3f0 3-6,8-12
+app/(root)/page.tsx
+  s_d8bfe202318d9f::t_f726830c9ddbbe 1-20
+app/(root)/layout.tsx
+  s_d8bfe202318d9f::t_5f06401f938bc2 1-13
+README.md
+  s_d8bfe202318d9f::t_d6b2037555d915 1,3,5,8,12,14,16,18,20,22-24,26
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "0da05455772eda9e19cedda74928861d383fcc82",
+  "prompts": {},
+  "sessions": {
+    "s_d8bfe202318d9f": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "9c295e26-3ef6-4a69-94ce-44e9b7763969",
+        "model": "claude-sonnet-5-5"
+      },
+      "human_author": "Piya Miang-lae <piyaboy097@gmail.com>"
+    }
+  }
+}
