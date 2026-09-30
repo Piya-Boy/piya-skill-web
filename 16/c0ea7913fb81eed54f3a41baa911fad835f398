@@ -1,0 +1,57 @@
+.gitignore
+  s_d8bfe202318d9f::t_c4838b83448beb 1-46
+.impeccable/surfaces/app-lang-page-tsx.md
+  s_d8bfe202318d9f::t_67d0b42f53f5e2 1-26
+README.md
+  s_d8bfe202318d9f::t_3049dcc7fa6eba 1-36
+app/[lang]/page.tsx
+  s_d8bfe202318d9f::t_2f138a6c0eb85e 1-275
+app/globals.css
+  s_d8bfe202318d9f::t_5009c26c33d063 1-61
+components/animated-number.tsx
+  s_d8bfe202318d9f::t_73bfc49f38ae64 1-22
+components/demo.tsx
+  s_d8bfe202318d9f::t_85504e7c7a0c97 1-84
+components/install-command.tsx
+  s_d8bfe202318d9f::t_af846455cdcb22 1-47
+components/install-tabs.tsx
+  s_d8bfe202318d9f::t_f2c782a6422964 1-67
+components/reactbits/CountUp.tsx
+  s_d8bfe202318d9f::t_41d53e2e9f1728 1-117
+components/reactbits/TextType.tsx
+  s_d8bfe202318d9f::t_82ec6919d22708 1-194
+lib/i18n.ts
+  s_d8bfe202318d9f::t_a6b36a996cd2f4 1-114
+package.json
+  s_d8bfe202318d9f::t_8c4ba4b0529a35 1-28
+postcss.config.mjs
+  s_d8bfe202318d9f::t_dcd2e6ce3255be 1-7
+public/file.svg
+  s_d8bfe202318d9f::t_ea1ff574f2fdfd 1
+public/globe.svg
+  s_d8bfe202318d9f::t_22d489e7d1baa5 1
+public/next.svg
+  s_d8bfe202318d9f::t_d5def286fd0f91 1
+public/vercel.svg
+  s_d8bfe202318d9f::t_4aa0950340b813 1
+public/window.svg
+  s_d8bfe202318d9f::t_56ad64c3dc9e0e 1
+tsconfig.json
+  s_d8bfe202318d9f::t_1958f1199bdfc5 1-34
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "16c0ea7913fb81eed54f3a41baa911fad835f398",
+  "prompts": {},
+  "sessions": {
+    "s_d8bfe202318d9f": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "9c295e26-3ef6-4a69-94ce-44e9b7763969",
+        "model": "claude-sonnet-5-5"
+      },
+      "human_author": "Piya Miang-lae <piyaboy097@gmail.com>"
+    }
+  }
+}
