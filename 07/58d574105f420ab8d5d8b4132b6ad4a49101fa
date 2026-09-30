@@ -1,0 +1,22 @@
+DESIGN.md
+  s_d8bfe202318d9f::t_389b6a405d83ab 1-19,21-257
+  s_d8bfe202318d9f::t_f2245fa69e9619 20
+.impeccable/design.json
+  s_d8bfe202318d9f::t_c65d6ddbc19ac3 1-142
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "0758d574105f420ab8d5d8b4132b6ad4a49101fa",
+  "prompts": {},
+  "sessions": {
+    "s_d8bfe202318d9f": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "9c295e26-3ef6-4a69-94ce-44e9b7763969",
+        "model": "claude-sonnet-5-5"
+      },
+      "human_author": "Piya Miang-lae <piyaboy097@gmail.com>"
+    }
+  }
+}
