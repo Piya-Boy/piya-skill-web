@@ -1,0 +1,142 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-30T00:00:00Z",
+  "title": "Design System: Piya-Skills",
+  "extensions": {
+    "colorMeta": {
+      "ground": { "role": "neutral", "displayName": "Void Black", "canonical": "#0a0a0a", "tonalRamp": ["#0a0a0a", "#111111", "#1a1a1a", "#262626", "#3a3a3a", "#8a8a8a", "#a1a1a1", "#ededed"] },
+      "panel": { "role": "neutral", "displayName": "Panel Black", "canonical": "#111111", "tonalRamp": ["#0a0a0a", "#111111", "#1a1a1a", "#262626", "#3a3a3a", "#8a8a8a", "#a1a1a1", "#ededed"] },
+      "raised": { "role": "neutral", "displayName": "Raised Grey", "canonical": "#1a1a1a", "tonalRamp": ["#0a0a0a", "#111111", "#1a1a1a", "#262626", "#3a3a3a", "#8a8a8a", "#a1a1a1", "#ededed"] },
+      "line": { "role": "neutral", "displayName": "Hairline", "canonical": "#262626", "tonalRamp": ["#0a0a0a", "#111111", "#1a1a1a", "#262626", "#3a3a3a", "#8a8a8a", "#a1a1a1", "#ededed"] },
+      "line-strong": { "role": "neutral", "displayName": "Strong Hairline", "canonical": "#3a3a3a", "tonalRamp": ["#0a0a0a", "#111111", "#1a1a1a", "#262626", "#3a3a3a", "#8a8a8a", "#a1a1a1", "#ededed"] },
+      "foreground": { "role": "primary", "displayName": "Off-White Ink", "canonical": "#ededed", "tonalRamp": ["#0a0a0a", "#1a1a1a", "#3a3a3a", "#8a8a8a", "#a1a1a1", "#c8c8c8", "#ededed", "#ffffff"] },
+      "muted": { "role": "neutral", "displayName": "Secondary Text", "canonical": "#a1a1a1", "tonalRamp": ["#0a0a0a", "#1a1a1a", "#3a3a3a", "#8a8a8a", "#a1a1a1", "#c8c8c8", "#ededed", "#ffffff"] },
+      "dim": { "role": "neutral", "displayName": "Tertiary Text", "canonical": "#8a8a8a", "tonalRamp": ["#0a0a0a", "#1a1a1a", "#3a3a3a", "#8a8a8a", "#a1a1a1", "#c8c8c8", "#ededed", "#ffffff"] },
+      "removed": { "role": "semantic", "displayName": "Removed Red", "canonical": "#f87171", "tonalRamp": ["#450a0a", "#7f1d1d", "#b91c1c", "#dc2626", "#ef4444", "#f87171", "#fca5a5", "#fee2e2"] },
+      "added": { "role": "semantic", "displayName": "Kept Green", "canonical": "#4ade80", "tonalRamp": ["#052e16", "#14532d", "#166534", "#16a34a", "#22c55e", "#4ade80", "#86efac", "#dcfce7"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "The Piya-Skills wordmark h1 only." },
+      "headline": { "displayName": "Headline", "purpose": "Section h2s." },
+      "title": { "displayName": "Title", "purpose": "Demo heading above the panel." },
+      "body": { "displayName": "Body", "purpose": "Lead copy and descriptions in muted." },
+      "demo-text": { "displayName": "Demo text", "purpose": "Thai before/after copy at loose leading." },
+      "label": { "displayName": "Label", "purpose": "Buttons, tabs, column headers." },
+      "code": { "displayName": "Code", "purpose": "Commands, skill names, versions, numbers." }
+    },
+    "shadows": [],
+    "motion": [
+      { "name": "color-transition", "value": "transition-colors (Tailwind default, 150ms ease)", "purpose": "Hover and selected state changes on tabs and copy buttons." },
+      { "name": "command-typing", "value": "TextType 22ms per character, 250ms initial delay, no loop", "purpose": "Hero install command types out once." },
+      { "name": "reduced-motion", "value": "animation and transition durations 0.01ms; scroll-behavior auto", "purpose": "Global prefers-reduced-motion override; command renders static." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "short-viewport", "value": "max-height: 700px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Off-White filled action: copy a skill's install command, star the repo.",
+      "html": "<button class=\"ds-btn-primary\">Copy command</button>",
+      "css": ".ds-btn-primary { min-height: 40px; padding: 0 12px; border: 0; border-radius: 6px; background: #ededed; color: #0a0a0a; font: 500 14px/1.43 var(--font-sans, system-ui, sans-serif); cursor: pointer; transition: background-color 150ms; } .ds-btn-primary:hover { background: rgba(237,237,237,0.85); } .ds-btn-primary:focus-visible { outline: 2px solid #ededed; outline-offset: 3px; }"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Bordered nav action such as the GitHub star button.",
+      "html": "<a class=\"ds-btn-outline\" href=\"#\">Star <span class=\"ds-btn-outline-count\">1,234</span></a>",
+      "css": ".ds-btn-outline { display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 0 12px; border: 1px solid #262626; border-radius: 6px; background: #0a0a0a; color: #ededed; font: 400 14px/1.43 system-ui, sans-serif; text-decoration: none; transition: background-color 150ms, border-color 150ms; } .ds-btn-outline:hover { background: #111111; border-color: #3a3a3a; } .ds-btn-outline:focus-visible { outline: 2px solid #ededed; outline-offset: 3px; } .ds-btn-outline-count { font: 400 12px ui-monospace, monospace; color: #a1a1a1; font-variant-numeric: tabular-nums; }"
+    },
+    {
+      "name": "Ghost Link Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Low-emphasis action beside a primary: view source, suggest a skill.",
+      "html": "<a class=\"ds-btn-ghost\" href=\"#\">View source</a>",
+      "css": ".ds-btn-ghost { display: inline-flex; align-items: center; min-height: 40px; padding: 0 12px; border-radius: 6px; color: #a1a1a1; font: 400 14px/1.43 system-ui, sans-serif; text-decoration: none; transition: color 150ms, background-color 150ms; } .ds-btn-ghost:hover { background: #111111; color: #ededed; } .ds-btn-ghost:focus-visible { outline: 2px solid #ededed; outline-offset: 3px; }"
+    },
+    {
+      "name": "Command Box",
+      "kind": "input",
+      "refersTo": "command-box",
+      "description": "Signature: mono install command with a dim prompt and an icon copy button.",
+      "html": "<div class=\"ds-command\"><p class=\"ds-command-text\"><span class=\"ds-command-prompt\">$ </span>npx skills add piya-boy/piya-skill</p><button class=\"ds-command-copy\" aria-label=\"Copy command\"><svg viewBox=\"0 0 16 16\" width=\"16\" height=\"16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"5.5\" y=\"5.5\" width=\"8\" height=\"8\" rx=\"1.5\"/><path d=\"M10.5 5.5V3.5A1.5 1.5 0 0 0 9 2H3.5A1.5 1.5 0 0 0 2 3.5V9a1.5 1.5 0 0 0 1.5 1.5h2\"/></svg></button></div>",
+      "css": ".ds-command { display: flex; align-items: center; gap: 12px; padding: 8px 8px 8px 16px; border: 1px solid #262626; border-radius: 12px; background: #111111; color: #ededed; } .ds-command-text { flex: 1; min-width: 0; margin: 0; padding: 8px 0; overflow-x: auto; white-space: nowrap; font: 400 14px/1.43 ui-monospace, monospace; } .ds-command-prompt { color: #8a8a8a; user-select: none; } .ds-command-copy { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: 0; border-radius: 8px; background: transparent; color: #a1a1a1; cursor: pointer; transition: color 150ms, background-color 150ms; } .ds-command-copy:hover { background: #1a1a1a; color: #ededed; } .ds-command-copy:focus-visible { outline: 2px solid #ededed; outline-offset: 3px; }"
+    },
+    {
+      "name": "Tabs",
+      "kind": "nav",
+      "refersTo": "tab",
+      "description": "Segmented tablist for demo audiences and install methods.",
+      "html": "<div class=\"ds-tabs\" role=\"tablist\"><button class=\"ds-tab ds-tab-on\" role=\"tab\" aria-selected=\"true\">Developer</button><button class=\"ds-tab\" role=\"tab\" aria-selected=\"false\">General</button><button class=\"ds-tab\" role=\"tab\" aria-selected=\"false\">Business</button></div>",
+      "css": ".ds-tabs { display: flex; gap: 4px; padding: 8px 12px; border: 1px solid #262626; border-radius: 12px 12px 0 0; background: #111111; } .ds-tab { min-height: 40px; padding: 0 12px; border: 0; border-radius: 6px; background: transparent; color: #a1a1a1; font: 400 14px/1.43 system-ui, sans-serif; cursor: pointer; transition: color 150ms; } .ds-tab:hover { color: #ededed; } .ds-tab-on { background: #1a1a1a; color: #ededed; } .ds-tab:focus-visible { outline: 2px solid #ededed; outline-offset: 3px; }"
+    },
+    {
+      "name": "Diff Panel",
+      "kind": "card",
+      "refersTo": "panel",
+      "description": "Signature: before/after Thai text with removed and added spans.",
+      "html": "<div class=\"ds-diff\"><section class=\"ds-diff-pane ds-diff-before\"><h3><span class=\"ds-dot ds-dot-del\"></span>Before</h3><p>ระบบ <del>ทำการ</del> ประมวลผลข้อมูล</p></section><section class=\"ds-diff-pane\"><h3><span class=\"ds-dot ds-dot-ins\"></span>After</h3><p>ระบบ <ins>ประมวลผล</ins>ข้อมูล</p></section></div>",
+      "css": ".ds-diff { display: grid; grid-template-columns: 1fr 1fr; overflow: hidden; border: 1px solid #262626; border-radius: 12px; background: #111111; text-align: left; } .ds-diff-pane { padding: 20px; } .ds-diff-before { border-right: 1px solid #262626; } .ds-diff h3 { display: flex; align-items: center; gap: 8px; margin: 0 0 12px; color: #a1a1a1; font: 500 12px system-ui, sans-serif; } .ds-diff p { margin: 0; font: 400 15px/1.9 system-ui, sans-serif; color: #ededed; } .ds-diff-before p { color: #a1a1a1; } .ds-dot { width: 8px; height: 8px; border-radius: 9999px; } .ds-dot-del { background: #f87171; } .ds-dot-ins { background: #4ade80; } .ds-diff del { padding: 0 2px; border-radius: 2px; background: rgba(248,113,113,0.12); color: #f87171; text-decoration-color: rgba(248,113,113,0.7); } .ds-diff ins { padding: 0 2px; border-radius: 2px; background: rgba(74,222,128,0.12); color: #4ade80; text-decoration: none; }"
+    },
+    {
+      "name": "Skills Row",
+      "kind": "card",
+      "refersTo": "panel",
+      "description": "Table row: mono name and version, paired test numbers, actions.",
+      "html": "<div class=\"ds-row\"><div><span class=\"ds-row-name\">thai-writing</span> <span class=\"ds-row-ver\">v1.0</span><p class=\"ds-row-sum\">Rewrites Thai text.</p></div><dl class=\"ds-row-tests\"><div><dt>Register · 12 cases</dt><dd><span class=\"ds-row-with\">92%</span><span class=\"ds-row-without\"> / 58%</span></dd></div></dl></div>",
+      "css": ".ds-row { display: grid; grid-template-columns: 1fr 19rem; gap: 24px; padding: 24px 20px; border: 1px solid #262626; border-radius: 12px; background: #0a0a0a; } .ds-row-name { font: 500 15px ui-monospace, monospace; color: #ededed; } .ds-row-ver { font: 400 12px ui-monospace, monospace; color: #8a8a8a; } .ds-row-sum { margin: 8px 0 0; max-width: 36rem; color: #a1a1a1; font: 400 14px/1.625 system-ui, sans-serif; } .ds-row-tests { margin: 0; font: 400 14px system-ui, sans-serif; } .ds-row-tests > div { display: flex; justify-content: space-between; gap: 12px; } .ds-row-tests dt { color: #8a8a8a; } .ds-row-tests dd { margin: 0; font: 400 14px ui-monospace, monospace; font-variant-numeric: tabular-nums; } .ds-row-with { color: #ededed; } .ds-row-without { color: #8a8a8a; }"
+    },
+    {
+      "name": "Test Bar",
+      "kind": "custom",
+      "refersTo": "panel",
+      "description": "With-skill versus baseline bar; width is the literal percentage.",
+      "html": "<div class=\"ds-bar-row\"><span class=\"ds-bar-name\">With skill</span><span class=\"ds-bar-track\"><span class=\"ds-bar-fill\" style=\"width:92%\"></span></span><span class=\"ds-bar-val\">92%</span></div>",
+      "css": ".ds-bar-row { display: grid; grid-template-columns: 6rem 1fr 3.5rem; align-items: center; gap: 12px; padding: 4px 0; font: 400 14px system-ui, sans-serif; } .ds-bar-name { color: #a1a1a1; } .ds-bar-track { display: block; height: 8px; overflow: hidden; border-radius: 9999px; background: #1a1a1a; } .ds-bar-fill { display: block; height: 100%; border-radius: 9999px; background: #ededed; } .ds-bar-val { text-align: right; color: #ededed; font: 400 14px ui-monospace, monospace; font-variant-numeric: tabular-nums; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Terminal Page",
+    "overview": "The page behaves like a well-kept terminal: a near-black ground, one command to copy, and real output shown before any claim is made. This is the category standard for developer tooling (the register of vercel.com, skills.sh and reactbits.dev), chosen on purpose by the user rather than reached by default. It earns its place through precision of spacing, type and states, not through ornament.\n\nThere is no accent colour. Emphasis is a step up the grey ramp, ending at white (#ededed) for the things that matter: the wordmark, the primary buttons, the \"with skill\" bar. Colour appears in exactly one place, inside the before/after demo, where red and green mean removed and kept. Depth comes from 1px borders and a single tonal step between ground and panel; nothing glows, blurs, or casts a shadow.\n\nDensity is calm and centred in the first viewport (wordmark, two lines of lead, command, demo), then left-aligned and tabular below it. Copy is honest about scale: one skill, small-sample test numbers, stated as such.",
+    "keyCharacteristics": [
+      "Near-black ground with tonal panels and hairline borders; no shadows, gradients, or glow.",
+      "White is the only accent; red and green exist only as diff semantics.",
+      "Geist for Latin, Geist Mono for commands and numbers, Noto Sans Thai as the Thai face, size-matched.",
+      "Every interactive target is at least 40px tall (44px for icon buttons and the star CTA).",
+      "Bilingual (TH/EN) with identical structure; language never changes layout."
+    ],
+    "rules": [
+      { "name": "The White-Only Accent Rule", "body": "Emphasis is white on black. No hue is introduced for buttons, links, badges, or highlights.", "section": "colors" },
+      { "name": "The Diff-Only Colour Rule", "body": "Red and green mean removed and added inside a before/after comparison, and nowhere else.", "section": "colors" },
+      { "name": "The Mono-For-Machine Rule", "body": "Anything the reader might copy, or any number they compare, is set in Geist Mono.", "section": "typography" },
+      { "name": "The Thai Leading Rule", "body": "Any paragraph that contains Thai prose uses generous leading (1.9 in the demo, relaxed elsewhere), never the tight leading of headings.", "section": "typography" },
+      { "name": "The Flat Rule", "body": "Surfaces are separated by border or by one tonal step, never by shadow, blur, glow, or gradient fill.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do keep white (#ededed) as the only emphasis colour; use the grey ramp for hierarchy.",
+      "Do separate surfaces with a 1px #262626 border or one tonal step (#0a0a0a, #111111, #1a1a1a).",
+      "Do set commands, skill names, versions and every comparable number in Geist Mono with tabular numerals.",
+      "Do keep touch targets at 40px minimum, 44px for icon buttons and primary CTAs, with the 2px white focus ring.",
+      "Do keep Thai prose at the loose leading (1.9 in demos) and rely on the Noto Sans Thai fallback with `font-size-adjust: from-font`.",
+      "Do state test numbers as small samples, with case counts next to every percentage.",
+      "Do keep TH and EN pages structurally identical.",
+      "Do honour `prefers-reduced-motion`: static command text, near-zero transitions, no smooth scroll."
+    ],
+    "donts": [
+      "Don't add shadows, glows, blur, or gradient fills to surfaces.",
+      "Don't use red or green outside a before/after diff.",
+      "Don't introduce a brand hue for links, badges, or buttons.",
+      "Don't use tones darker than #8a8a8a for text on the dark grounds.",
+      "Don't set Thai body text at tight leading or in a face other than the matched Noto Sans Thai fallback.",
+      "Don't imply scale the collection does not have (logos, download counts, \"trusted by\")."
+    ]
+  }
+}
