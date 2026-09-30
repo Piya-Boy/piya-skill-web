@@ -1,36 +1,26 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Piya-Skills site
 
-## Getting Started
+Landing page for [Piya-Boy/piya-skill](https://github.com/Piya-Boy/piya-skill). Next.js (App Router, static export), Tailwind, and two components from [React Bits](https://reactbits.dev) (`TextType`, `CountUp`). Thai at `/th`, English at `/en`.
 
-First, run the development server:
+## Develop
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Adding a skill: add an entry to `lib/skills.ts` (and its real demo text if it has one). Copy for both languages lives in `lib/i18n.ts`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deploy (GitHub Pages)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+`.github/workflows/pages.yml` builds a static export and deploys it on every push to `main`, and once a day so the GitHub star count stays fresh. The site is served from `/<repo name>`, which the workflow passes as `NEXT_PUBLIC_BASE_PATH`.
 
-## Learn More
+One-time setup: repo Settings → Pages → Source: **GitHub Actions**.
 
-To learn more about Next.js, take a look at the following resources:
+To build the Pages output locally:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+NEXT_PUBLIC_BASE_PATH=/piya-skill-web npm run build   # writes ./out
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+`components/reactbits/` holds vendored React Bits source; ESLint skips it.
