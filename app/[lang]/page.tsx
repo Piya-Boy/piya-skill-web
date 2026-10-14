@@ -108,6 +108,11 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
 
       <main id="main">
         <section className="mx-auto flex max-w-6xl flex-col items-center px-4 pb-16 pt-10 text-center sm:px-6 sm:pb-24 sm:pt-14 [@media(max-height:700px)]:pt-6">
+          <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-line bg-panel px-3.5 py-1 text-xs text-muted">
+            <span className="font-mono font-medium text-fg">v2.0</span>
+            <span className="text-dim">·</span>
+            <span>{t.v2Badge}</span>
+          </div>
           <h1 className="text-5xl font-semibold tracking-[-0.04em] sm:text-6xl lg:text-7xl">Piya-Skills</h1>
           <p className="mt-4 max-w-2xl text-balance text-base leading-relaxed text-muted sm:text-lg">{t.heroLead}</p>
           <div className="mt-7 w-full max-w-3xl">
@@ -119,6 +124,34 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
             <h2 className="mb-3 text-left text-xl font-semibold tracking-tight">{t.demoTitle}</h2>
             <Demo lang={lang} demos={demos} labels={{ audience: t.demoAudience, before: t.before, after: t.after }} />
             <p className="mt-3 text-left text-sm text-dim">{t.demoNote}</p>
+          </div>
+        </section>
+
+        <section aria-labelledby="v2-features-title" className="border-t border-line">
+          <div className="mx-auto max-w-6xl px-4 py-16 sm:py-24 sm:px-6">
+            <div className="max-w-2xl">
+              <h2 id="v2-features-title" className="text-3xl font-semibold tracking-tight">{t.v2FeaturesTitle}</h2>
+              <p className="mt-3 leading-relaxed text-muted">{t.v2FeaturesLead}</p>
+            </div>
+
+            <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              <div className="rounded-xl border border-line bg-panel p-5">
+                <h3 className="text-base font-semibold text-fg">{t.featDeAiTitle}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted">{t.featDeAiDesc}</p>
+              </div>
+              <div className="rounded-xl border border-line bg-panel p-5">
+                <h3 className="text-base font-semibold text-fg">{t.featTermsTitle}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted">{t.featTermsDesc}</p>
+              </div>
+              <div className="rounded-xl border border-line bg-panel p-5">
+                <h3 className="text-base font-semibold text-fg">{t.featAudienceTitle}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted">{t.featAudienceDesc}</p>
+              </div>
+              <div className="rounded-xl border border-line bg-panel p-5">
+                <h3 className="text-base font-semibold text-fg">{t.featPreserveTitle}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted">{t.featPreserveDesc}</p>
+              </div>
+            </div>
           </div>
         </section>
 
