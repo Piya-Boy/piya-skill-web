@@ -24,10 +24,10 @@ export type Skill = {
 export const skills: Skill[] = [
   {
     name: "thai-natural-writing",
-    version: "0.1",
+    version: "2.0",
     summary: {
-      th: "เกลาภาษาไทยที่ AI เขียนให้อ่านเหมือนคนเขียน เลือกคำตามผู้อ่าน และคงศัพท์ที่วงการใช้ภาษาอังกฤษอยู่แล้ว",
-      en: "Rewrites AI-sounding Thai into natural Thai for its reader, keeping the English terms Thai developers already use.",
+      th: "เกลาภาษาไทยที่ AI เขียนให้อ่านเหมือนคนเขียน ตัดสำนวนหุ่นยนต์ (ไม่ใช่แค่ X แต่คือ Y, สรุปดราม่า, ดำเนินการ/ทำการ) เลือกคำตามผู้อ่าน และคงศัพท์เทคนิคในวงการ",
+      en: "Humanizes AI-sounding Thai into natural prose. Cuts structural AI tells (not-X-but-Y, dramatic closers, padded verbs) while matching the audience and keeping dev terms in English.",
     },
     benchmarks: [
       { label: { th: "รอบ 1", en: "Round 1" }, cases: 3, withSkill: 93, withoutSkill: 67 },
