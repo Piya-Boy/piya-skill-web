@@ -10,6 +10,7 @@ import {
   REPO,
   REPO_URL,
   agentPrompt,
+  updatePrompt,
   demos,
   featured,
   installCommand,
@@ -262,6 +263,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
                 methods={[
                   { id: "npx", label: t.methodNpx, help: t.methodNpxHelp, code: installCommand(featured.name) },
                   { id: "agent", label: t.methodAgent, help: t.methodAgentHelp, code: agentPrompt(featured.name) },
+                  { id: "update", label: t.methodUpdate, help: t.methodUpdateHelp, code: updatePrompt(featured.name) },
                   {
                     id: "manual",
                     label: t.methodManual,

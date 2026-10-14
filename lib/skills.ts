@@ -44,6 +44,9 @@ export const installCommand = (skill: string) =>
 export const agentPrompt = (skill: string) =>
   `Install the /${skill} skill globally from ${REPO_URL}`;
 
+export const updatePrompt = (skill: string) =>
+  `Update the /${skill} skill from ${REPO_URL}`;
+
 export const skillUrl = (skill: string) => `${REPO_URL}/tree/main/skills/${skill}`;
 
 /**
