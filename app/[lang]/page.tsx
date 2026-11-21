@@ -311,6 +311,9 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
                   { id: "kit-core", label: t.kitTabCore, help: t.kitHelpCore, code: kitCommand() },
                   { id: "kit-web", label: t.kitTabWeb, help: t.kitHelpWeb, code: kitCommand("--profile web") },
                   { id: "kit-dry", label: t.kitTabDry, help: t.kitHelpDry, code: kitCommand("--dry-run") },
+                  { id: "kit-merge", label: t.kitTabMerge, help: t.kitHelpMerge, code: kitCommand("--only rules --merge-rules") },
+                  { id: "kit-mcp", label: t.kitTabMcp, help: t.kitHelpMcp, code: kitCommand("--only mcp --force-mcp") },
+                  { id: "kit-hooks", label: t.kitTabHooks, help: t.kitHelpHooks, code: kitCommand("--only hooks") },
                 ]}
               />
               <a
