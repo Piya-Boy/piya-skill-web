@@ -66,7 +66,7 @@ const dict = {
     methodUpdateHelp: "วางประโยคนี้ใน Claude Code, Codex หรือ Cursor เพื่ออัปเดตสกิลเป็นเวอร์ชันล่าสุด",
     kitTitle: "Agent kit",
     kitLead:
-      "ชุด sub-agent พร้อมกฎ, skill และ MCP สำหรับ Claude Code, Codex, Cursor, Gemini CLI และ GitHub Copilot ติดตั้งลงโปรเจกต์ด้วยคำสั่งเดียว Main agent แบ่งงานให้ agent เฉพาะทาง และแต่ละตัวหยิบ skill เองเมื่อต้องใช้",
+      "ชุด sub-agent พร้อมกฎ, skill และ MCP สำหรับ Claude Code, Codex, Cursor, Gemini CLI, Antigravity และ GitHub Copilot ติดตั้งลงโปรเจกต์ด้วยคำสั่งเดียว Main agent แบ่งงานให้ agent เฉพาะทาง และแต่ละตัวหยิบ skill เองเมื่อต้องใช้",
     kitAgentsTitle: "10 agent หลัก + 3 agent เว็บ",
     kitAgentsDesc:
       "researcher, architect, developer, backend, tester, qa, reviewer, security-auditor, security, devops ส่วน profile web เพิ่ม designer, web-dev, frontend",
@@ -89,7 +89,7 @@ const dict = {
     kitTabAll: "all",
     kitHelpAll: "ลงทุก profile ในครั้งเดียว: core, web และ superpowers ถ้ามี profile ใหม่ในภายหลังจะรวมให้เอง",
     kitTabTool: "tool",
-    kitHelpTool: "เลือกเครื่องมือด้วย --tool: claude (ค่าเริ่มต้น), codex, cursor, gemini, copilot หรือ all คั่นหลายตัวด้วยคอมมา เช่น --tool claude,codex ได้ไฟล์ rules, skill, agent และ MCP ตามรูปแบบของแต่ละเจ้า ส่วน plugin กับ hook ใช้ได้เฉพาะ Claude Code",
+    kitHelpTool: "เลือกเครื่องมือด้วย --tool: claude (ค่าเริ่มต้น), codex, cursor, gemini, copilot, antigravity (หรือ agy) หรือ all คั่นหลายตัวด้วยคอมมา เช่น --tool claude,codex ได้ไฟล์ rules, skill, agent และ MCP ตามรูปแบบของแต่ละเจ้า ส่วน plugin กับ hook ใช้ได้เฉพาะ Claude Code",
     kitHelpDry: "แสดงทุกขั้นตอนที่จะทำ โดยไม่แก้ไฟล์ใดๆ",
     kitTabMerge: "merge-rules",
     kitTabMcp: "force-mcp",
@@ -161,7 +161,7 @@ const dict = {
     methodUpdateHelp: "Paste this into Claude Code, Codex, or Cursor to update your installed skill to the latest version.",
     kitTitle: "Agent kit",
     kitLead:
-      "Sub-agents with rules, skills and MCP servers for Claude Code, Codex, Cursor, Gemini CLI and GitHub Copilot, installed into a project with one command. The main agent hands work to specialist agents, and each one picks the skills it needs on demand.",
+      "Sub-agents with rules, skills and MCP servers for Claude Code, Codex, Cursor, Gemini CLI, Antigravity and GitHub Copilot, installed into a project with one command. The main agent hands work to specialist agents, and each one picks the skills it needs on demand.",
     kitAgentsTitle: "10 core agents + 3 web agents",
     kitAgentsDesc:
       "researcher, architect, developer, backend, tester, qa, reviewer, security-auditor, security, devops. The web profile adds designer, web-dev, frontend.",
@@ -184,7 +184,7 @@ const dict = {
     kitTabAll: "all",
     kitHelpAll: "Installs every profile at once: core, web and superpowers. A profile added later is included too.",
     kitTabTool: "tool",
-    kitHelpTool: "Pick tools with --tool: claude (default), codex, cursor, gemini, copilot, or all. Separate several with commas, e.g. --tool claude,codex. Rules, skills, agents and MCP servers are written in each tool's own format. Plugins and hooks are Claude Code only.",
+    kitHelpTool: "Pick tools with --tool: claude (default), codex, cursor, gemini, copilot, antigravity (or agy), or all. Separate several with commas, e.g. --tool claude,codex. Rules, skills, agents and MCP servers are written in each tool's own format. Plugins and hooks are Claude Code only.",
     kitHelpDry: "Prints every action and changes nothing.",
     kitTabMerge: "merge-rules",
     kitTabMcp: "force-mcp",
