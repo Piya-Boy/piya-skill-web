@@ -14,6 +14,9 @@ import {
   demos,
   featured,
   installCommand,
+  KIT_REPO,
+  KIT_REPO_URL,
+  kitCommand,
   skillUrl,
   skills,
   type Lang,
@@ -79,6 +82,9 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
             </a>
             <a href="#install" className="hidden min-h-10 items-center rounded-md px-3 text-muted hover:text-fg sm:flex">
               {t.navInstall}
+            </a>
+            <a href="#kit" className="hidden min-h-10 items-center rounded-md px-3 text-muted hover:text-fg sm:flex">
+              {t.navKit}
             </a>
             <div role="group" aria-label={t.langLabel} className="mx-1 flex items-center rounded-md border border-line p-0.5">
               {langs.map((l) => (
@@ -272,6 +278,48 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
                   },
                 ]}
               />
+            </div>
+          </div>
+        </section>
+
+        <section id="kit" aria-labelledby="kit-title" className="scroll-mt-20 border-t border-line">
+          <div className="mx-auto max-w-6xl px-4 py-16 sm:py-24 sm:px-6">
+            <div className="max-w-2xl">
+              <h2 id="kit-title" className="text-3xl font-semibold tracking-tight">{t.kitTitle}</h2>
+              <p className="mt-3 leading-relaxed text-muted">{t.kitLead}</p>
+            </div>
+
+            <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              {[
+                { title: t.kitAgentsTitle, desc: t.kitAgentsDesc },
+                { title: t.kitDocsTitle, desc: t.kitDocsDesc },
+                { title: t.kitChecksTitle, desc: t.kitChecksDesc },
+                { title: t.kitSafeTitle, desc: t.kitSafeDesc },
+              ].map((c) => (
+                <div key={c.title} className="rounded-xl border border-line bg-panel p-5">
+                  <h3 className="text-base font-semibold text-fg">{c.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted">{c.desc}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="mx-auto mt-12 max-w-3xl">
+              <p className="mb-4 text-muted">{t.kitInstallLead}</p>
+              <InstallTabs
+                labels={{ ...copyLabels, group: t.kitGroup }}
+                methods={[
+                  { id: "kit-core", label: t.kitTabCore, help: t.kitHelpCore, code: kitCommand() },
+                  { id: "kit-web", label: t.kitTabWeb, help: t.kitHelpWeb, code: kitCommand("--profile web") },
+                  { id: "kit-dry", label: t.kitTabDry, help: t.kitHelpDry, code: kitCommand("--dry-run") },
+                ]}
+              />
+              <a
+                href={KIT_REPO_URL}
+                className="mt-4 inline-flex min-h-10 items-center gap-2 rounded-md px-3 text-sm text-muted hover:bg-panel hover:text-fg"
+              >
+                <GitHubIcon className="size-4" />
+                {t.kitSource} · {KIT_REPO}
+              </a>
             </div>
           </div>
         </section>
