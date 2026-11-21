@@ -26,7 +26,7 @@ export function InstallTabs({ methods, labels }: Props) {
 
   return (
     <div className="overflow-hidden rounded-xl border border-line bg-panel">
-      <div role="tablist" aria-label={labels.group} onKeyDown={onKeyDown} className="flex gap-1 border-b border-line px-3 py-2">
+      <div role="tablist" aria-label={labels.group} onKeyDown={onKeyDown} className="flex flex-wrap gap-1 border-b border-line px-3 py-2">
         {methods.map((x, i) => {
           const on = i === active;
           return (
