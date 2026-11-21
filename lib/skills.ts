@@ -1,6 +1,11 @@
 export const REPO = "Piya-Boy/piya-skill";
 export const REPO_URL = `https://github.com/${REPO}`;
 
+// The agent kit lives in its own repo; it installs with one npx command and writes only files.
+export const KIT_REPO = "Piya-Boy/Agents";
+export const KIT_REPO_URL = `https://github.com/${KIT_REPO}`;
+export const kitCommand = (flags = "") => `npx github:${KIT_REPO}${flags ? ` ${flags}` : ""}`;
+
 export type Lang = "th" | "en";
 export type Localized = Record<Lang, string>;
 
