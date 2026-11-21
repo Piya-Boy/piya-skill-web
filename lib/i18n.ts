@@ -66,7 +66,7 @@ const dict = {
     methodUpdateHelp: "วางประโยคนี้ใน Claude Code, Codex หรือ Cursor เพื่ออัปเดตสกิลเป็นเวอร์ชันล่าสุด",
     kitTitle: "Agent kit",
     kitLead:
-      "ชุด sub-agent พร้อมกฎ, skill และ MCP สำหรับ Claude Code ติดตั้งลงโปรเจกต์ด้วยคำสั่งเดียว Main agent แบ่งงานให้ agent เฉพาะทาง และแต่ละตัวหยิบ skill เองเมื่อต้องใช้",
+      "ชุด sub-agent พร้อมกฎ, skill และ MCP สำหรับ Claude Code, Codex, Cursor, Gemini CLI และ GitHub Copilot ติดตั้งลงโปรเจกต์ด้วยคำสั่งเดียว Main agent แบ่งงานให้ agent เฉพาะทาง และแต่ละตัวหยิบ skill เองเมื่อต้องใช้",
     kitAgentsTitle: "10 agent หลัก + 3 agent เว็บ",
     kitAgentsDesc:
       "researcher, architect, developer, backend, tester, qa, reviewer, security-auditor, security, devops ส่วน profile web เพิ่ม designer, web-dev, frontend",
@@ -79,7 +79,7 @@ const dict = {
     kitSafeTitle: "ลงแต่ไฟล์ ไม่ทับของเดิม",
     kitSafeDesc:
       "ไม่เพิ่ม package.json หรือ node_modules ลงโปรเจกต์ ข้าม AGENTS.md, agent และ skill ที่มีอยู่แล้ว ลอง --dry-run ดูก่อนได้",
-    kitInstallLead: "รันที่ root ของโปรเจกต์ ต้องมี Node 22.20.0 ขึ้นไป, git และ claude CLI",
+    kitInstallLead: "รันที่ root ของโปรเจกต์ ต้องมี Node 22.20.0 ขึ้นไปและ git ส่วน claude CLI ต้องมีเฉพาะเมื่อใช้ Claude Code เลือกเครื่องมืออื่นด้วย --tool",
     kitGroup: "คำสั่ง",
     kitTabCore: "core",
     kitTabWeb: "web",
@@ -88,6 +88,8 @@ const dict = {
     kitHelpWeb: "เพิ่ม designer, web-dev, frontend, Chrome DevTools MCP และ plugin ui-ux-pro-max รวม profile ได้ เช่น --profile web,superpowers",
     kitTabAll: "all",
     kitHelpAll: "ลงทุก profile ในครั้งเดียว: core, web และ superpowers ถ้ามี profile ใหม่ในภายหลังจะรวมให้เอง",
+    kitTabTool: "tool",
+    kitHelpTool: "เลือกเครื่องมือด้วย --tool: claude (ค่าเริ่มต้น), codex, cursor, gemini, copilot หรือ all คั่นหลายตัวด้วยคอมมา เช่น --tool claude,codex ได้ไฟล์ rules, skill, agent และ MCP ตามรูปแบบของแต่ละเจ้า ส่วน plugin กับ hook ใช้ได้เฉพาะ Claude Code",
     kitHelpDry: "แสดงทุกขั้นตอนที่จะทำ โดยไม่แก้ไฟล์ใดๆ",
     kitTabMerge: "merge-rules",
     kitTabMcp: "force-mcp",
@@ -159,7 +161,7 @@ const dict = {
     methodUpdateHelp: "Paste this into Claude Code, Codex, or Cursor to update your installed skill to the latest version.",
     kitTitle: "Agent kit",
     kitLead:
-      "Sub-agents with rules, skills and MCP servers for Claude Code, installed into a project with one command. The main agent hands work to specialist agents, and each one picks the skills it needs on demand.",
+      "Sub-agents with rules, skills and MCP servers for Claude Code, Codex, Cursor, Gemini CLI and GitHub Copilot, installed into a project with one command. The main agent hands work to specialist agents, and each one picks the skills it needs on demand.",
     kitAgentsTitle: "10 core agents + 3 web agents",
     kitAgentsDesc:
       "researcher, architect, developer, backend, tester, qa, reviewer, security-auditor, security, devops. The web profile adds designer, web-dev, frontend.",
@@ -172,7 +174,7 @@ const dict = {
     kitSafeTitle: "Files only, nothing overwritten",
     kitSafeDesc:
       "No package.json or node_modules added to your project. Existing AGENTS.md, agents and skills are skipped. Try --dry-run first.",
-    kitInstallLead: "Run it from the project root. Needs Node 22.20.0 or newer, git and the claude CLI.",
+    kitInstallLead: "Run it from the project root. Needs Node 22.20.0 or newer and git; the claude CLI only if you use Claude Code. Pick other tools with --tool.",
     kitGroup: "Command",
     kitTabCore: "core",
     kitTabWeb: "web",
@@ -181,6 +183,8 @@ const dict = {
     kitHelpWeb: "Adds designer, web-dev, frontend, the Chrome DevTools MCP server and the ui-ux-pro-max plugin. Profiles combine, e.g. --profile web,superpowers.",
     kitTabAll: "all",
     kitHelpAll: "Installs every profile at once: core, web and superpowers. A profile added later is included too.",
+    kitTabTool: "tool",
+    kitHelpTool: "Pick tools with --tool: claude (default), codex, cursor, gemini, copilot, or all. Separate several with commas, e.g. --tool claude,codex. Rules, skills, agents and MCP servers are written in each tool's own format. Plugins and hooks are Claude Code only.",
     kitHelpDry: "Prints every action and changes nothing.",
     kitTabMerge: "merge-rules",
     kitTabMcp: "force-mcp",
