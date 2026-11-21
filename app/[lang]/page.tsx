@@ -4,6 +4,7 @@ import { CopyButton } from "@/components/copy-button";
 import { Demo } from "@/components/demo";
 import { InstallCommand } from "@/components/install-command";
 import { InstallTabs } from "@/components/install-tabs";
+import { KitBuilder } from "@/components/kit-builder";
 import { AnimatedNumber } from "@/components/animated-number";
 import { fill, getDict, isLang, langs } from "@/lib/i18n";
 import {
@@ -50,6 +51,27 @@ function StarIcon({ className = "" }: { className?: string }) {
     <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinejoin="round" aria-hidden="true" className={className}>
       <path d="M8 1.8l1.9 3.9 4.3.6-3.1 3 .7 4.3L8 11.6l-3.8 2 .7-4.3-3.1-3 4.3-.6z" />
     </svg>
+  );
+}
+
+function KitCommand({ help, code, labels }: { help: string; code: string; labels: { copy: string; copied: string; failed: string } }) {
+  return (
+    <div className="flex flex-col gap-3">
+      <p className="text-sm text-muted">{help}</p>
+      <div className="flex items-center gap-3 rounded-lg border border-line bg-bg py-2 pl-4 pr-2">
+        <code className="min-w-0 flex-1 overflow-x-auto whitespace-nowrap py-2 font-mono text-sm [scrollbar-width:none] [mask-image:linear-gradient(to_right,black_85%,transparent)]">
+          {code}
+        </code>
+        <CopyButton
+          text={code}
+          label={labels.copy}
+          copiedLabel={labels.copied}
+          failedLabel={labels.failed}
+          iconOnly
+          className="size-11 shrink-0 rounded-lg text-muted hover:bg-raised hover:text-fg"
+        />
+      </div>
+    </div>
   );
 }
 
@@ -304,20 +326,46 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
             </div>
 
             <div className="mx-auto mt-12 max-w-3xl">
-              <p className="mb-4 text-muted">{t.kitInstallLead}</p>
-              <InstallTabs
-                labels={{ ...copyLabels, group: t.kitGroup }}
-                methods={[
-                  { id: "kit-core", label: t.kitTabCore, help: t.kitHelpCore, code: kitCommand() },
-                  { id: "kit-web", label: t.kitTabWeb, help: t.kitHelpWeb, code: kitCommand("--profile web") },
-                  { id: "kit-all", label: t.kitTabAll, help: t.kitHelpAll, code: kitCommand("--profile all") },
-                  { id: "kit-tool", label: t.kitTabTool, help: t.kitHelpTool, code: kitCommand("--tool all") },
-                  { id: "kit-dry", label: t.kitTabDry, help: t.kitHelpDry, code: kitCommand("--dry-run") },
-                  { id: "kit-merge", label: t.kitTabMerge, help: t.kitHelpMerge, code: kitCommand("--only rules --merge-rules") },
-                  { id: "kit-mcp", label: t.kitTabMcp, help: t.kitHelpMcp, code: kitCommand("--only mcp --force-mcp") },
-                  { id: "kit-hooks", label: t.kitTabHooks, help: t.kitHelpHooks, code: kitCommand("--only hooks") },
+              <p className="mb-6 text-muted">{t.kitInstallLead}</p>
+
+              <KitBuilder
+                profiles={[
+                  { id: "core", label: t.kitTabCore, help: t.kitHelpCore, flag: "" },
+                  { id: "web", label: t.kitTabWeb, help: t.kitHelpWeb, flag: "--profile web" },
+                  { id: "all", label: t.kitTabAll, help: t.kitHelpAll, flag: "--profile all" },
                 ]}
+                labels={{
+                  ...copyLabels,
+                  stepSet: t.kitStepSet,
+                  stepTool: t.kitStepTool,
+                  toolHelp: t.kitToolHelp,
+                  auto: t.kitAuto,
+                  commandLabel: t.kitCommandLabel,
+                }}
               />
+
+              <details className="group mt-8 rounded-xl border border-line bg-panel">
+                <summary className="flex min-h-12 cursor-pointer list-none items-center justify-between px-5 text-base font-semibold text-fg [&::-webkit-details-marker]:hidden">
+                  {t.kitMoreTitle}
+                  <span aria-hidden="true" className="text-dim transition-transform group-open:rotate-180">
+                    ▾
+                  </span>
+                </summary>
+                <div className="flex flex-col gap-6 border-t border-line p-5">
+                  {[
+                    { flag: "--dry-run", help: t.kitHelpDry, code: kitCommand("--dry-run") },
+                    { flag: "--merge-rules", help: t.kitHelpMerge, code: kitCommand("--only rules --merge-rules") },
+                    { flag: "--force-mcp", help: t.kitHelpMcp, code: kitCommand("--only mcp --force-mcp") },
+                    { flag: "--only hooks", help: t.kitHelpHooks, code: kitCommand("--only hooks") },
+                  ].map((o) => (
+                    <div key={o.flag}>
+                      <p className="mb-2 font-mono text-sm text-fg">{o.flag}</p>
+                      <KitCommand help={o.help} code={o.code} labels={copyLabels} />
+                    </div>
+                  ))}
+                </div>
+              </details>
+
               <a
                 href={KIT_REPO_URL}
                 className="mt-4 inline-flex min-h-10 items-center gap-2 rounded-md px-3 text-sm text-muted hover:bg-panel hover:text-fg"
