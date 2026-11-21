@@ -66,7 +66,7 @@ const dict = {
     methodUpdateHelp: "วางประโยคนี้ใน Claude Code, Codex หรือ Cursor เพื่ออัปเดตสกิลเป็นเวอร์ชันล่าสุด",
     kitTitle: "Agent kit",
     kitLead:
-      "ชุด sub-agent พร้อมกฎ, skill และ MCP ติดตั้งลงโปรเจกต์ด้วยคำสั่งเดียว ใช้ได้กับ Claude Code, Codex, Cursor, Gemini CLI, Antigravity และ GitHub Copilot",
+      "ชุด sub-agent พร้อมกฎ, skill และ MCP ติดตั้งลงโปรเจกต์ด้วยคำสั่งเดียว ใช้ได้กับ Claude Code, Codex, Cursor, Gemini CLI, Antigravity, OpenCode และ GitHub Copilot",
     kitAgentsTitle: "10 agent หลัก + 3 agent เว็บ",
     kitAgentsDesc:
       "Main agent แบ่งงานให้ agent เฉพาะทาง เช่น researcher, developer, tester, reviewer ส่วน profile web เพิ่ม designer, web-dev, frontend",
@@ -161,7 +161,7 @@ const dict = {
     methodUpdateHelp: "Paste this into Claude Code, Codex, or Cursor to update your installed skill to the latest version.",
     kitTitle: "Agent kit",
     kitLead:
-      "Sub-agents with rules, skills and MCP servers, installed into a project with one command. Works with Claude Code, Codex, Cursor, Gemini CLI, Antigravity and GitHub Copilot.",
+      "Sub-agents with rules, skills and MCP servers, installed into a project with one command. Works with Claude Code, Codex, Cursor, Gemini CLI, Antigravity, OpenCode and GitHub Copilot.",
     kitAgentsTitle: "10 core agents + 3 web agents",
     kitAgentsDesc:
       "The main agent hands work to specialists such as researcher, developer, tester and reviewer. The web profile adds designer, web-dev, frontend.",

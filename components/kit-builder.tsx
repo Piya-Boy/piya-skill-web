@@ -11,6 +11,7 @@ const TOOLS = [
   { id: "gemini", label: "Gemini CLI" },
   { id: "copilot", label: "Copilot" },
   { id: "antigravity", label: "Antigravity" },
+  { id: "opencode", label: "OpenCode" },
 ] as const;
 
 type ToolId = (typeof TOOLS)[number]["id"];
